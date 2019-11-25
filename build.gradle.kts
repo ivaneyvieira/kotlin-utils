@@ -6,6 +6,7 @@ repositories {
   jcenter()
 }
 
+group = "br.com.astrosoft"
 version = "1.0"
 
 dependencies {
