@@ -63,19 +63,17 @@ fun Date?.toLocalDate(): LocalDate? {
   return zdt.toLocalDate()
 }
 
-fun LocalDateTime?.format(): String {
-  if(this == null) return ""
+fun LocalDateTime.format(): String {
   return DATETIME_FORMATTER.format(this)
 }
 
-fun Date?.format(): String? {
-  if(this == null) return null
+fun Date.format(): String {
   val sdf = SimpleDateFormat(DATE_PATTERN)
   return sdf.format(this)
 }
 
-fun LocalDate?.format(): String {
-  return this?.format(DATE_FORMATTER) ?: ""
+fun LocalDate.format(): String {
+  return this.format(DATE_FORMATTER)
 }
 
 fun Int.localDate(): LocalDate? {
